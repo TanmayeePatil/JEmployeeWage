@@ -6,10 +6,14 @@ public class EmployeeWage{
  public static void main (String args[]){
       System.out.println("WELCOME TO EMPLOYEE WAGE PROBLEM");
 
-       int empWagePerHrs=20;
-       double empSalary=0;
-       int empHrs=0;
+      int empWagePerHrs=20;
+      int empSalary,TotalEmpSalary=0;
+      int empHrs=0;
+      int daysPerMonth=20;
+      int i;
 
+    for(i=1;i<=daysPerMonth;i++)
+    {
       Random myRan=new Random();
       int myRanVar=myRan.nextInt(3);
       System.out.println("Random Integers: "+myRanVar);
@@ -26,11 +30,11 @@ public class EmployeeWage{
                           break;
           default : System.out.println("Invalid");
       }
-
-     //Calculating Salary
-     empSalary=empWagePerHrs * empHrs;
-
-     System.out.println("Salary of the employee:" + empSalary);
-
+        empSalary=empWagePerHrs * empHrs;
+        System.out.println("DAY"+i+" : Salary of employee: "+empSalary);
+        TotalEmpSalary=empSalary + TotalEmpSalary;
+     }
+    System.out.println("----------------------------------------------");
+    System.out.println("Total Monthly Salary: "+ TotalEmpSalary);
  }
 }
