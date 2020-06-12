@@ -13,19 +13,21 @@ public class EmployeeWage{
 
       //USE CASE 1: Employee Absent or Present using renadom function
       Random myRan=new Random();
-      int myRanVar=myRan.nextInt(2);
+      int myRanVar=myRan.nextInt(3);
       System.out.println("Random Integers: "+myRanVar);
 
-      if(myRanVar==0)
-       {
-         System.out.println("Employee Absent");
-         empHrs=0;
-       }
-      else
-       {
-         System.out.println("Employee Present");
-         empHrs=8;
-       }
+      switch(myRanVar){
+          case 2 : System.out.println("Employee Present Full Time");
+                          empHrs=12;
+                          break;
+          case 1 : System.out.println("Employee Present Part Time");
+                          empHrs=8;
+                          break;
+          case 0 : System.out.println("Employee Absent");
+                          empHrs=0;
+                          break;
+          default : System.out.println("Invalid");
+      }
 
      //Calculating Salary
      empSalary=empWagePerHrs * empHrs;
