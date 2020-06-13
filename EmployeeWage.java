@@ -20,14 +20,9 @@ public class EmployeeWage{
 
       switch(myRanVar){
           case 2 : //System.out.println("Employee Present Full Time");
-                          empHrs=12;
+                          empHrs=8;
                           break;
           case 1 : //System.out.println("Employee Present Part Time");
-                          empHrs=8;
-          case 2 : System.out.println("Employee Present Full Time");
-                          empHrs=8;
-                          break;
-          case 1 : System.out.println("Employee Present Part Time");
                           empHrs=4;
                           break;
           case 0 : //System.out.println("Employee Absent");
